@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS Chat Interface</title>
+    <link rel="stylesheet" href="chat_styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <header class="chat-header">
+            <div class="header-content">
+                <h1>🤖 NEXUS Chat</h1>
+                <p>Self-Learning AI Assistant</p>
+            </div>
+            <div class="header-actions">
+                <button id="newChatBtn" class="action-btn" title="New Chat">➕ New</button>
+                <button id="settingsBtn" class="action-btn" title="Settings">⚙️ Settings</button>
+            </div>
+        </header>
+
+        <!-- Session Info -->
+        <div class="session-info">
+            <span id="sessionId">Session: Loading...</span>
+            <span id="messageCount">Messages: 0</span>
+            <span id="agentStatus" class="status-online">● Online</span>
+        </div>
+
+        <!-- Chat Messages -->
+        <main class="chat-messages" id="chatMessages"></main>
+
+        <!-- Input Section -->
+        <section class="chat-input-section">
+            <!-- Advanced Options -->
+            <div class="chat-options">
+                <label>
+                    <input type="checkbox" id="streamToggle" checked>
+                    Stream Responses
+                </label>
+                <label>
+                    <input type="checkbox" id="showIntentToggle" checked>
+                    Show Intent
+                </label>
+                <label>
+                    <input type="checkbox" id="showSentimentToggle" checked>
+                    Show Sentiment
+                </label>
+            </div>
+
+            <!-- Input Area -->
+            <div class="chat-input-area">
+                <textarea 
+                    id="messageInput" 
+                    class="message-input" 
+                    placeholder="Ask NEXUS anything... (Ctrl+Enter to send)"
+                    rows="3"
+                ></textarea>
+                <button id="sendBtn" class="send-btn">Send 📤</button>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="quick-action" data-prompt="Tell me about yourself">About</button>
+                <button class="quick-action" data-prompt="What have you learned recently?">Learnings</button>
+                <button class="quick-action" data-prompt="Calculate fibonacci(10)">Calculate</button>
+                <button class="quick-action" data-prompt="Analyze sentiment in this text">Analyze</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Settings</h2>
+            <div class="settings-form">
+                <div class="setting-item">
+                    <label>Response Stream Delay (ms)</label>
+                    <input type="number" id="streamDelay" value="100" min="0" max="1000">
+                </div>
+                <div class="setting-item">
+                    <label>Max Messages to Display</label>
+                    <input type="number" id="maxMessages" value="50" min="10" max="200">
+                </div>
+                <div class="setting-item">
+                    <label>Theme</label>
+                    <select id="themeSelect">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+                <button id="saveSettings" class="save-btn">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chat_script.js"></script>
+</body>
+</html>
