@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS - AI Chat Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="nexus-website">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <span class="logo-icon">🤖</span>
+                    <span class="logo-text">NEXUS</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#chat" class="nav-link chat-btn">💬 Chat Now</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Meet NEXUS</h1>
+                <p class="hero-subtitle">Your Self-Learning AI Assistant</p>
+                <p class="hero-description">
+                    Experience real-time conversations with an AI that learns, adapts, and evolves
+                </p>
+                <button class="cta-button" onclick="scrollToChat()">Start Chatting 🚀</button>
+            </div>
+            <div class="hero-illustration">
+                <div class="ai-icon">🧠</div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>Real-Time Chat</h3>
+                    <p>Instant messaging with WebSocket support for seamless conversation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Self-Learning</h3>
+                    <p>NEXUS learns from every conversation and improves continuously</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Intent Recognition</h3>
+                    <p>Automatically detects what you want: search, analyze, calculate, etc.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💭</div>
+                    <h3>Sentiment Analysis</h3>
+                    <p>Understands emotional context and responds appropriately</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Conversation Analytics</h3>
+                    <p>Track conversation quality, topics, and effectiveness scores</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Streaming Responses</h3>
+                    <p>See responses as they're generated with real-time streaming</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Capabilities Section -->
+        <section class="capabilities">
+            <h2>Capabilities</h2>
+            <div class="capabilities-grid">
+                <div class="capability">
+                    <h3>🔍 Research & Search</h3>
+                    <p>Find and analyze information across multiple sources</p>
+                </div>
+                <div class="capability">
+                    <h3>🧮 Calculations</h3>
+                    <p>Solve complex mathematical problems instantly</p>
+                </div>
+                <div class="capability">
+                    <h3>📝 Summarization</h3>
+                    <p>Create concise summaries of complex topics</p>
+                </div>
+                <div class="capability">
+                    <h3>📊 Data Analysis</h3>
+                    <p>Evaluate and interpret data with insights</p>
+                </div>
+                <div class="capability">
+                    <h3>🤝 Assistance</h3>
+                    <p>Get help with coding, writing, and problem-solving</p>
+                </div>
+                <div class="capability">
+                    <h3>📚 Learning</h3>
+                    <p>Learn new concepts explained in simple terms</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <h2>About NEXUS</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Advanced AI Architecture</h3>
+                    <p>
+                        NEXUS is built on cutting-edge AI technology with:
+                    </p>
+                    <ul class="about-list">
+                        <li>✅ Self-evolving learning model</li>
+                        <li>✅ Real-time token tracking</li>
+                        <li>✅ Advanced memory management</li>
+                        <li>✅ Multi-tool integration</li>
+                        <li>✅ Continuous improvement</li>
+                        <li>✅ Reflection and adaptation</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">1000+</div>
+                        <div class="stat-label">Conversations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">99%</div>
+                        <div class="stat-label">Accuracy</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Available</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">⚡</div>
+                        <div class="stat-label">Real-time</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="chat-section">
+            <h2>Chat with NEXUS</h2>
+            <p class="chat-subtitle">Start a conversation and experience AI at its best</p>
+            
+            <div class="chat-container">
+                <!-- Sidebar -->
+                <div class="chat-sidebar">
+                    <h3>Quick Start</h3>
+                    <div class="quick-actions">
+                        <button class="quick-btn" onclick="setMessage('Tell me about yourself')">About Yourself</button>
+                        <button class="quick-btn" onclick="setMessage('What are your capabilities?')">Capabilities</button>
+                        <button class="quick-btn" onclick="setMessage('Calculate fibonacci(20)')">Calculate</button>
+                        <button class="quick-btn" onclick="setMessage('Tell me a tech fact')">Tech Fact</button>
+                    </div>
+                </div>
+
+                <!-- Main Chat -->
+                <div class="chat-main">
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message system">
+                            <div class="message-content">
+                                👋 Welcome to NEXUS! I'm ready to chat. Type your message below.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-area">
+                        <div class="chat-options">
+                            <label>
+                                <input type="checkbox" id="streamToggle" checked>
+                                Stream Response
+                            </label>
+                            <label>
+                                <input type="checkbox" id="showIntentToggle" checked>
+                                Show Intent
+                            </label>
+                        </div>
+
+                        <div class="input-group">
+                            <textarea 
+                                id="messageInput" 
+                                class="message-input" 
+                                placeholder="Ask me anything..." 
+                                rows="3"
+                            ></textarea>
+                            <button class="send-btn" onclick="sendChatMessage()">Send ➤</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 NEXUS AI Platform. All rights reserved.</p>
+            <p>Powered by Advanced AI Technology</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
